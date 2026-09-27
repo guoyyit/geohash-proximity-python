@@ -1,8 +1,4 @@
-from fastapi import FastAPI
+"""Entry point: ``uv run uvicorn main:app``."""
+from geohash_proximity.api import app
 
-app = FastAPI()
-
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+__all__ = ["app"]
