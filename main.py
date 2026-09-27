@@ -1,8 +1,5 @@
-from fastapi import FastAPI
+"""HTTP entry point: ``uvicorn main:app``."""
 
-app = FastAPI()
+from geo_proximity.api import create_app
 
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app = create_app()
